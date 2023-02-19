@@ -1,0 +1,14 @@
+total 8
+drwxr-xr-x 2 challomark challomark 4096 Feb 19 16:15 .
+drwxr-xr-x 6 challomark challomark 4096 Feb 19 16:09 ..
+-rw-r--r-- 1 challomark challomark    0 Feb 19 16:11 abc.txt
+-rw-r--r-- 1 challomark challomark    0 Feb 19 16:11 def.txt
+-rw-r--r-- 1 challomark challomark    0 Feb 19 16:11 ghi.txt
+-rw-r--r-- 1 challomark challomark    0 Feb 19 16:11 jkl.txt
+-rw-r--r-- 1 challomark challomark    0 Feb 19 16:16 output1.txt
+abc.txt
+def.txt
+ghi.txt
+jkl.txt
+output1.txt
+trunc.txt
