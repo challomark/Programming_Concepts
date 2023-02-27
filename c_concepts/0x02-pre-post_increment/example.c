@@ -11,7 +11,10 @@
 int main(void)
 {
 	int i = 1;
+	int j;
 
-	printf("%d\n", i++);
+	j = i++;
+
+	printf("%d %d\n", i, j);
 	return (0);
 }
