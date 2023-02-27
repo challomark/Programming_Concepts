@@ -10,7 +10,8 @@
 
 int main(void)
 {
-	int result = 5 < 3;
+	/* int result = 5 < 3; */
+	int result = 3 == 3;
 	printf("%d\n", result);
 
 	return (0);
