@@ -15,3 +15,16 @@ if ( TRUE ) {
 }
 ~~~~
 * Always put braces following if statements.
+
+## Else
+
+~~~~
+if ( TRUE ) 
+{
+	/* Execute these statements if TRUE */
+}
+else
+{
+	/* Execute these statements if FALSE */
+}
+~~~~
