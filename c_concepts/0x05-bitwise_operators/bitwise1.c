@@ -3,7 +3,7 @@
 /**
  * main - Entry point
  *
- * Description: Using left right shift operator
+ * Description: Using left shift operator
  *
  */
 int main(void)
