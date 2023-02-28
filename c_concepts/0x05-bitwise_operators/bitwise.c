@@ -9,7 +9,7 @@
 
 int main(void)
 {
-	int result = 25 & 15;
+	int result = 25 | 15;
 
 	printf("%d\n", result);
 	return (0);
