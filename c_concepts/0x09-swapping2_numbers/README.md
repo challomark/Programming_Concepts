@@ -64,3 +64,6 @@ int main()
 ~~~~
 
 #### The reason for swapping numbers without using a temporary variable is to save bytes.
+
+### Swapping two numbers easy way.
+#### b = a + b - (a = b);
