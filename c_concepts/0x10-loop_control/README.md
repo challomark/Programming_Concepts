@@ -109,7 +109,7 @@ int main ()
 * The given value of a is: 18
 * The given value of a is: 19
 
-##Goto statement syntax
+## Goto statement syntax
 
 * goto label;
 
