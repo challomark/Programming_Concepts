@@ -11,3 +11,6 @@ data_type variable_name = value;    /* defining single variable */
 data_type variable_name1, variable_name2;    /* defining multiple variable */
 ~~~~
 
+* data_type: Type of data that a variable can store.
+* variable_name: Name of the variable given by the user.
+* value: value assigned to the variable by the user.
