@@ -54,12 +54,11 @@ int main()
 
 ## Types of Variables in C 
 
-* Classification on the Basis of Scope:
+### Classification on the Basis of Scope:
 
-	* Local Variables - are declared inside a function or a block of code. Their scope is limited to the block or function in which they are declared.
+#### Local Variables - are declared inside a function or a block of code. Their scope is limited to the block or function in which they are declared.
 ~~~~
-/* C program to declare and print local variable inside a */
-/* function. */
+/* C program to declare and print local variable inside a function. */
 #include <stdio.h>
 
 void function()
@@ -71,7 +70,7 @@ void function()
 int main() { function(); }
 ~~~~
 
-	* Global Variables - are declared outside the function or a block of code. Their scope is the whole program i.e. we can access the global variable anywhere in the C program after it is declared.
+#### Global Variables - are declared outside the function or a block of code. Their scope is the whole program i.e. we can access the global variable anywhere in the C program after it is declared.
 
 ~~~~
 /* C program to demonstrate use of global variable */
