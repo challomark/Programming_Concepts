@@ -28,8 +28,8 @@ data_type variable_name1, variable_name2;    /* defining multiple variable */
 
 ~~~~
 /** C program to demonstrate the
- *declaration, definition and
- *initialization
+ * declaration, definition and
+ * initialization
  */
 #include <stdio.h>
 
