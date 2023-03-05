@@ -9,3 +9,7 @@
 * type arrayName [ arraySize ];
 
 * This is called a single-dimensional array.
+
+Checkout GeeksforGeeks https://www.geeksforgeeks.org/arrays-in-c-cpp/
+
+
