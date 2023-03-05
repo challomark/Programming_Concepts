@@ -3,7 +3,7 @@
 int main()
 {
 	int x; /* normal variable of type int */
-	int *ptr; /*declaring a pointer */
+	int *ptr; /* declaring a pointer --> an address of a variable */
 	x = 5;
 	ptr = &x; /* prints address of x */
 
