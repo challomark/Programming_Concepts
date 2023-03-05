@@ -27,9 +27,10 @@ data_type variable_name1, variable_name2;    /* defining multiple variable */
 * the process where the user assigns some meaningful value to the variable.
 
 ~~~~
-// C program to demonstrate the
-// declaration, definition and
-// initialization
+/** C program to demonstrate the
+ *declaration, definition and
+ *initialization
+ */
 #include <stdio.h>
 
 int main()
