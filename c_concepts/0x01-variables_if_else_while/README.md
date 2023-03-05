@@ -72,8 +72,9 @@ int main() { function(); }
 ~~~~
 
 	* Global Variables - are declared outside the function or a block of code. Their scope is the whole program i.e. we can access the global variable anywhere in the C program after it is declared.
+
 ~~~~
-// C program to demonstrate use of global variable
+/* C program to demonstrate use of global variable */
 #include <stdio.h>
 
 int x = 20; /* global variable */
