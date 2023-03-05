@@ -55,7 +55,7 @@ int main()
 
 ## Types of Variables in C 
 
-### Classification on the Basis of Scope:
+### 1. Classification on the Basis of Scope:
 
 #### Local Variables - are declared inside a function or a block of code. Their scope is limited to the block or function in which they are declared.
 ~~~~
@@ -92,3 +92,11 @@ int main()
 }
 ~~~~
 
+### 2. Classification on the Basis of Storage Class
+
+* Static Variables
+* Automatic Variables
+* Extern Variables
+* Register Variables
+
+## Check bookmarks for more info
