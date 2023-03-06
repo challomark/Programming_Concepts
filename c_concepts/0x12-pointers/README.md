@@ -49,4 +49,4 @@ int main()
 * To avoid compiler confusion for same variable name.
 * To use in Control Tables.
 
-## How to Use Pointers and more info check out https://www.geeksforgeeks.org/c-pointers/
+## How to Use Pointers and more info check out https://www.geeksforgeeks.org/c-pointers/ and my Cohort 12 playlist on YouTube.
