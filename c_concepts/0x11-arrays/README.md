@@ -10,6 +10,6 @@
 
 * This is called a single-dimensional array.
 
-Checkout GeeksforGeeks https://www.geeksforgeeks.org/arrays-in-c-cpp/
+### Check out GeeksforGeeks https://www.geeksforgeeks.org/arrays-in-c-cpp/ & Cohort 12 YouTube playlist
 
 
