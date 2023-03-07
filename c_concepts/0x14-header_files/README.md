@@ -72,6 +72,6 @@ the entire header file file
 ...
 #include SYSTEM_H
 ~~~~
-SYSTEM_H will be expanded, and the preprocessor will look for system_1.h as if the #include had been written that way originally. SYSTEM_H could be defined by your Makefile with a -D option.
+* SYSTEM_H will be expanded, and the preprocessor will look for system_1.h as if the #include had been written that way originally. SYSTEM_H could be defined by your Makefile with a -D option.
 
 ## Watch Clickate Academy videos for more info
