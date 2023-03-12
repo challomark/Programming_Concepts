@@ -8,7 +8,7 @@ int main()
 	f = a > b > d < c;
 
 
-	printf("%d", f != 1);
+	printf("%d\n", f != 1);
 	printf("%d\n", a + c == b >= e < c + d != 1);
 	return (0);
 }
