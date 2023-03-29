@@ -52,7 +52,7 @@ int main()
 	strcat( str1, str2);
 	printf("strcat( str1, str2):   %s\n", str1 );
 
-/* total lenghth of str1 after concatenation */
+/* total length of str1 after concatenation */
 	len = strlen(str1);
 	printf("strlen(str1) :  %d\n", len );
 
