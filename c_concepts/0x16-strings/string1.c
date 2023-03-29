@@ -3,5 +3,5 @@
 int main()
 {
 	char name[30] = "Mark";
-	printf("%s", name);
+	printf("%s\n", name);
 }
