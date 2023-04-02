@@ -9,4 +9,6 @@ void main()
 
 	printf("Value of a is: %d\n", a);
 	printf("Value of a is: %d\n", *p);
+	printf("Address of a is: %p\n", &a);
+	printf("Address of a is: %p\n", p);
 }
