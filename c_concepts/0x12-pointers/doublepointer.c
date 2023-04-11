@@ -6,6 +6,8 @@ void main()
 	unsigned int *p = &a;
 	unsigned int **q = &p;
 	unsigned int ***r = &q;
+	*p = 12;
+	**q = 17;
 
 	printf("a is %d %d %d %d\n", a, *p, **q, ***r);
 	printf("address of q is: %p\n", &q);
