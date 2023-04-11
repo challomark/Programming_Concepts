@@ -6,4 +6,6 @@ void main()
 	int *p = &a[0];
 
 	printf("Value is: %d\n", *p);
+	p = p + 2;
+	printf("Value is: %d\n", *p);
 }
