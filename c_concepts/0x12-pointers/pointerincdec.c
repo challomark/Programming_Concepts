@@ -6,7 +6,7 @@ void main()
 	int *p;
 	p = a;
 	
-	printf("%d %d\n", *(p++), *p++);
+	printf("%d\n", *++p);
 	printf("%d\n", *p);
 
 }
