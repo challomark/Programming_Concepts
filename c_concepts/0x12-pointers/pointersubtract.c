@@ -12,4 +12,10 @@ void main()
 
 	q = q - 2;
 	printf("Value of q is: %d\n", *q);
+
+	p = p + 2;
+	printf("q - p is: %d\n", q - p);
+
+	q = q - 2;
+	printf("Value of q is: %d\n", *q);
 }
