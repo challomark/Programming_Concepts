@@ -9,6 +9,8 @@ void main()
 	char ch = 'c';
 
 	vp = &a;
-
 	printf("a = %d\n", *(int *)vp);
+
+	vp = &b;
+	printf("b = %f\n", *(float *)vp);
 }
