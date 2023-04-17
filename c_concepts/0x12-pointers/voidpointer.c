@@ -13,4 +13,7 @@ void main()
 
 	vp = &b;
 	printf("b = %f\n", *(float *)vp);
+
+	vp = &ch;
+	printf("ch = %c\n", *(char *)vp);
 }
