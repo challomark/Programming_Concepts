@@ -3,6 +3,8 @@
 
 void main()
 {
-	int *ptr;
+	int *ptr = (int*)malloc(sizeof(int));
+	*ptr = 67;
+
 	printf("%d\n", *ptr);
 }
