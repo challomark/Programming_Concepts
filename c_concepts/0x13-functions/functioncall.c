@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-void fun(int , int);
+void fun(int, int);
 void main()
 {
 	int x = 5, y = 7;
