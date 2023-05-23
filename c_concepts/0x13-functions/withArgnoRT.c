@@ -12,7 +12,7 @@ void main()
 
 void sum(float x, float y)
 {
-	float s = 0;
-	s = x + y;
-	printf("Sum = %f\n", s);
+	//float s = 0;
+	//s = x + y;
+	printf("Sum = %f\n", x + y);
 }
