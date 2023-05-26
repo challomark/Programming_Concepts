@@ -60,4 +60,4 @@ int sum(int a, int b) {
 	* float - 0
 	* double - 0
 	* pointer - NULL
-
+## Check Jenny's Lectures for more info
