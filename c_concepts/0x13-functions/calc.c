@@ -1,29 +1,29 @@
 #include <stdio.h>
 
-int add(int a, int b)
+void add(int a, int b)
 {
 	printf("Addition is %d\n", a + b);
 }
 
-int sub(int a, int b)
+void sub(int a, int b)
 {
 	printf("Subtraction is %d\n", a - b);
 }
 
-int mult(int a, int b)
+void mult(int a, int b)
 {
 	printf("Multiplication is %d\n", a * b);
 }
 
-int div(int a, int b)
+void div(int a, int b)
 {
 	printf("Division is %d\n", a / b);
 }
 
-int main()
+void main()
 {
 	int ch, a, b;
-	int (*fptr[10])(int, int) = {add, sub, mult, div};
+	void (*fptr[10])(int, int) = {add, sub, mult, div}; /* using function pointer */
 
 	printf("0 for add\n1 for sub\n2 for multiply\n3 for division\n");
 	printf("Enter your choice: ");
