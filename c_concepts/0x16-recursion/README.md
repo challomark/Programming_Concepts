@@ -34,7 +34,7 @@ unsigned long long int factorial(unsigned int i) {
 
 int  main() {
    int i = 12;
-   printf("Factorial of %d is %d\n", i, factorial(i));
+   printf("Factorial of %d is %lld\n", i, factorial(i));
    return 0;
 }
 ~~~~
