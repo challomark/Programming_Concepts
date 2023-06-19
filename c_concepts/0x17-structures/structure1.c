@@ -11,6 +11,7 @@ void main()
 {
 	struct student s1 = {1, "Mark", 90.91};
 	struct student s2 = {2, "Challo", 92};
+	/* s2 = s1; */
 
 	printf("Information for s1");
 	printf("\n%d %s %f", s1.rollno, s1.name, s1.marks);
