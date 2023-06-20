@@ -1,102 +1,38 @@
-# Variables
+# Variables in C
 
-* A variable in C is a memory location associated with some name in order to store some form of data and retrieve it when required. 
-* We can store different types of data in the variable and reuse the same variable for storing some other data any number of times.
-* For using a variable in C, we have to first define it to tell the compiler about its existence so that compiler can allocate the required memory to it.
+* In C programming, variables are used to store and manipulate data. A variable is a named location in memory that holds a value with a specific data type. Variables in C have the following characteristics:
 
-### Syntax:
+## Declaration
+* Before using a variable, it needs to be declared with its data type. The declaration specifies the variable's name and the type of data it can hold. For example:
 ~~~~
-data_type variable_name = value;    /* defining single variable */
-	OR
-data_type variable_name1, variable_name2;    /* defining multiple variable */
-~~~~
-
-* data_type: Type of data that a variable can store.
-* variable_name: Name of the variable given by the user.
-* value: value assigned to the variable by the user
-
-## 3 aspects of defining a variable:
-
-#### Variable Declaration
-* tells the compiler about the existence of the variable with the given name and data type. No memory is allocated to a variable in the declaration.
-
-#### Variable Definition
-* the compiler allocates some memory and some value to it. A defined variable will contain some random garbage value till it is not initialized.
-
-#### Variable Initialization
-* the process where the user assigns some meaningful value to the variable.
-
-~~~~
-/** C program to demonstrate the
- * declaration, definition and
- * initialization
- */
-#include <stdio.h>
-
-int main()
-{
-	/* declaration with definition */
-	int defined_var;
-
-	printf("Defined_var: %d\n", defined_var);
-
-	/* initialization */
-	defined_var = 12;
-
-	/* declaration + definition + initialization */
-	int ini_var = 25;
-
-	printf("Value of defined_var after initialization: %d\n",defined_var);
-	printf("Value of ini_var: %d", ini_var);
-
-	return 0;
-}
+int age;         // Declaration of an integer variable named 'age'
+float salary;    // Declaration of a floating-point variable named 'salary'
+char letter;     // Declaration of a character variable named 'letter'
 ~~~~
 
-## Types of Variables in C 
-
-### 1. Classification on the Basis of Scope:
-
-#### Local Variables - are declared inside a function or a block of code. Their scope is limited to the block or function in which they are declared.
+## Initialization
+* Variables can also be initialized at the time of declaration. Initialization assigns an initial value to the variable. For example:
 ~~~~
-/* C program to declare and print local variable inside a function. */
-#include <stdio.h>
-
-void function()
-{
-	int x = 10; /* local variable */
-	printf("%d", x);
-}
-
-int main() { function(); }
+int count = 0;           // Initialization of an integer variable named 'count' with the value 0
+float pi = 3.14;         // Initialization of a floating-point variable named 'pi' with the value 3.14
+char grade = 'A';        // Initialization of a character variable named 'grade' with the value 'A'
 ~~~~
 
-#### Global Variables - are declared outside the function or a block of code. Their scope is the whole program i.e. we can access the global variable anywhere in the C program after it is declared.
-
+## Assignment
+* Once declared, variables can be assigned new values using the assignment operator (=). The assignment operator assigns the value on the right side to the variable on the left side. For example:
 ~~~~
-/* C program to demonstrate use of global variable */
-#include <stdio.h>
-
-int x = 20; /* global variable */
-
-void function1() { printf("Function 1: %d\n", x); }
-
-void function2() { printf("Function 2: %d\n", x); }
-
-int main()
-{
-
-	function1();
-	function2();
-	return 0;
-}
+age = 25;               // Assigning the value 25 to the variable 'age'
+salary = 5000.50;       // Assigning the value 5000.50 to the variable 'salary'
+letter = 'X';           // Assigning the character 'X' to the variable 'letter'
 ~~~~
 
-### 2. Classification on the Basis of Storage Class
+## Data Types
+* C supports various data types, including integers (int), floating-point numbers (float, double), characters (char), and more. Each data type has a specific size and range of values it can hold.
 
-* Static Variables
-* Automatic Variables
-* Extern Variables
-* Register Variables
+## Scope
+* The scope of a variable determines its visibility and accessibility within a program. Variables can be declared globally (outside any function) or locally (inside a function or block). Local variables are accessible only within the scope where they are defined.
 
-## Check bookmarks for more info
+## Naming Rules
+*  Variables in C must follow certain naming rules. They must start with a letter (or underscore) and can contain letters, digits, or underscores. C is case-sensitive, so uppercase and lowercase letters are considered distinct.
+
+### Variables are widely used in C programming to store and manipulate data during program execution. They provide a way to store temporary values, perform calculations, and store user input, among many other purposes.
