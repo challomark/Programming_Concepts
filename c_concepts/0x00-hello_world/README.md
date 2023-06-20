@@ -18,7 +18,7 @@
 
 * In C programming, comments are used to add explanatory or descriptive text within the source code. Comments are ignored by the compiler and do not affect the execution of the program. They serve as notes for programmers or as a way to disable certain lines of code temporarily.
 
-### There are two ways to write comments in C:
+#### There are two ways to write comments in C:
 
 * Single-line comments: To create a comment that spans a single line, you can use two forward slashes (//) followed by the comment text. Anything after the // symbol on the same line will be considered a comment. Here's an example:
 ~~~~
