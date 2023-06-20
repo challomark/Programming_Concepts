@@ -1,4 +1,4 @@
-# C PROGRAMMING
+# C Programming
 
 * C programming is a widely used programming language that was originally developed in the 1970s. It was created by Dennis Ritchie at Bell Labs as an evolution of the earlier B programming language. C has since become one of the most popular and influential programming languages in the world.
 
@@ -18,15 +18,15 @@
 
 * In C programming, comments are used to add explanatory or descriptive text within the source code. Comments are ignored by the compiler and do not affect the execution of the program. They serve as notes for programmers or as a way to disable certain lines of code temporarily.
 
-* There are two ways to write comments in C:
+### There are two ways to write comments in C:
 
-	* Single-line comments: To create a comment that spans a single line, you can use two forward slashes (//) followed by the comment text. Anything after the // symbol on the same line will be considered a comment. Here's an example:
+* Single-line comments: To create a comment that spans a single line, you can use two forward slashes (//) followed by the comment text. Anything after the // symbol on the same line will be considered a comment. Here's an example:
 ~~~~
 // This is a single-line comment in C
 int x = 10; // This is another comment
 ~~~~
 	
-	* Multi-line comments: To create comments that span multiple lines, you can enclose the comment text between /* and */ symbols. Everything between these symbols, regardless of line breaks, will be treated as a comment. Here's an example:
+* Multi-line comments: To create comments that span multiple lines, you can enclose the comment text between /* and */ symbols. Everything between these symbols, regardless of line breaks, will be treated as a comment. Here's an example:
 ~~~~
 /* This is a multi-line comment
    in C programming.
