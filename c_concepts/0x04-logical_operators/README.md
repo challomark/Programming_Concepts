@@ -1,4 +1,4 @@
-# Logical Operators
+# Logical Operators in C
 
 * In C, logical operators are used to combine or manipulate Boolean values (true or false) and perform logical operations. They are primarily used in conditional statements to evaluate multiple conditions or negate conditions. Here are the three logical operators available in C:
 
