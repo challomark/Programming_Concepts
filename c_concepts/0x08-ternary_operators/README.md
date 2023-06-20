@@ -1,4 +1,4 @@
-# Ternary Operators
+# Ternary Operators in C
 
 * Use the ternary operator for decision making in place of longer if and else conditional statements.
 * It helps to think of the ternary operator as a shorthand way or writing an if-else statement. 
