@@ -1,6 +1,29 @@
-# C - Strings
+# Strings in C
 
-* Strings are actually one-dimensional array of characters terminated by a null character '\0'. Thus a null-terminated string contains the characters that comprise the string followed by a null.
+* In C programming, strings are represented as arrays of characters terminated by a null character ('\0'). String manipulation in C involves a set of library functions from the <string.h> header file. Here's an overview of working with strings in C:
+
+## String Declaration
+* Strings in C are declared as character arrays with a null character at the end to mark the end of the string.
+
+* Example: 
+~~~~
+char str1[10] = "Hello";      // Declaration with initialization
+char str2[] = "World";        // Declaration with automatic size determination
+char str3[20];                // Declaration without initialization
+~~~~
+
+## String Input and Output
+* You can use the printf function to print strings and the scanf function to read strings from the user.
+
+* Example:
+~~~~
+char name[20];
+
+printf("Enter your name: ");
+scanf("%s", name);   // Reads a string from the user
+
+printf("Hello, %s!\n", name);  // Prints the string
+~~~~
 
 * The following declaration and initialization create a string consisting of the word "Hello". To hold the null character at the end of the array, the size of the character array containing the string is one more than the number of characters in the word "Hello."
 ~~~~
@@ -23,6 +46,8 @@ int main ()
 	return 0;
 }
 ~~~~
+
+## String Functions
 
 * C supports a wide range of functions that manipulate null-terminated strings:
 	* strcpy(s1, s2); - Copies string s2 into string s1.
@@ -66,3 +91,57 @@ strcpy(str3, str1): Hello
 strcat(str1, str2): HelloWorld
 strlen(str1): 10
 ~~~~
+
+* Another example:
+~~~~
+#include <string.h>
+#include <stdio.h>
+
+int main() {
+    char str1[20] = "Hello";
+    char str2[10] = "World";
+    char result[30];
+
+    printf("Length of str1: %d\n", strlen(str1));
+
+    strcpy(result, str1);
+    printf("Result after strcpy: %s\n", result);
+
+    strcat(result, str2);
+    printf("Result after strcat: %s\n", result);
+
+    if (strcmp(str1, str2) == 0) {
+        printf("Strings are equal\n");
+    } else {
+        printf("Strings are not equal\n");
+    }
+
+    return 0;
+}
+~~~~
+
+## Character Input and Output
+* Individual characters of a string can be accessed and manipulated using array indexing.
+
+* Example: 
+~~~~
+char str[] = "Hello";
+
+printf("First character: %c\n", str[0]);
+
+str[0] = 'J';
+printf("Modified string: %s\n", str);
+~~~~
+
+## String Formatting
+* C provides formatting options to control how strings are printed using the printf function. The %s format specifier is used to print strings.
+
+* Example:
+~~~~
+char name[] = "John";
+int age = 25;
+
+printf("Name: %s, Age: %d\n", name, age);
+~~~~
+
+#### Working with strings in C requires careful handling to ensure that the null character is correctly placed and that sufficient memory is allocated to store the string. Additionally, functions like scanf should be used with caution to avoid buffer overflow issues.
