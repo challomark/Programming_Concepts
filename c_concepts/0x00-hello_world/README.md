@@ -24,7 +24,6 @@
 // This is a single-line comment in C
 int x = 10; // This is another comment
 ~~~~
-
 	* Multi-line comments: To create comments that span multiple lines, you can enclose the comment text between /* and */ symbols. Everything between these symbols, regardless of line breaks, will be treated as a comment. Here's an example:
 ~~~~
 /* This is a multi-line comment
