@@ -1,38 +1,88 @@
-# If Statements in C
-## Basic If Syntax
+# Conditional Statements in C
+* In C programming, conditional statements are used to control the flow of the program based on certain conditions. The if, else, else if, and combinations of these statements allow you to specify different actions to be executed based on different conditions. 
 
-* The structure of an if statement is as follows:
-~~~~	
-if ( statement is TRUE )
-	Execute this line of code
+* Here's how these statements work:
 
-if ( 5 < 10 )
-	printf("Five is now less than ten, that's a big surprise");
-
-if ( TRUE ) {
-	/* between the braces is the body of the if statement */
-	Execute all statements inside the body
-}
+## if statement
+* The if statement is used to execute a block of code if a condition is true. It has the following syntax:
 ~~~~
-* Always put braces following if statements.
-
-## Else
-
-~~~~
-if ( TRUE ) 
-{
-	/* Execute these statements if TRUE */
-}
-else
-{
-	/* Execute these statements if FALSE */
+if (condition) {
+    // Code to be executed if the condition is true
 }
 ~~~~
 
-## Else if
+* Example:
+~~~~
+int num = 5;
+if (num > 0) {
+    printf("The number is positive.\n");
+}
+~~~~
 
-* Another use of else is when there are multiple conditional statements that may all evaluate to true, yet you want only one if statement's body to execute. You can use an "else if" statement following an if statement and its body; that way, if the first statement is true, the "else if" will be ignored, but if the if statement is false, it will then check the condition for the else if statement. If the if statement was true the else statement will not be checked. It is possible to use numerous else if statements to ensure that only one block of code is executed.
+## if-else statement
+* The if-else statement allows you to specify two different blocks of code. The first block is executed if the condition is true, and the second block is executed if the condition is false. It has the following syntax:
+~~~~
+if (condition) {
+    // Code to be executed if the condition is true
+} else {
+    // Code to be executed if the condition is false
+}
+~~~~
 
+* Example:
+~~~~
+int num = 5;
+if (num > 0) {
+    printf("The number is positive.\n");
+} else {
+    printf("The number is non-positive.\n");
+}
+~~~~
+
+## else if statement
+* The else if statement allows you to specify multiple conditions to be checked sequentially. If the first condition is false, it moves to the next else if condition. If all conditions are false, the else block is executed. It has the following syntax:
+~~~~
+if (condition1) {
+    // Code to be executed if condition1 is true
+} else if (condition2) {
+    // Code to be executed if condition1 is false and condition2 is true
+} else {
+    // Code to be executed if all conditions are false
+}
+~~~~
+
+* Example:
+~~~~
+int num = 5;
+if (num > 0) {
+    printf("The number is positive.\n");
+} else if (num < 0) {
+    printf("The number is negative.\n");
+} else {
+    printf("The number is zero.\n");
+}
+~~~~
+
+## Combination of if, else if, else
+* You can combine multiple if, else if, and else statements to handle more complex conditions and decision-making. The conditions are evaluated sequentially, and only one block of code is executed based on the first condition that evaluates to true.
+
+* Example:
+~~~~
+int num = 5;
+if (num > 0) {
+    printf("The number is positive.\n");
+} else if (num < 0) {
+    printf("The number is negative.\n");
+} else if (num == 0) {
+    printf("The number is zero.\n");
+} else {
+    printf("Invalid number.\n");
+}
+~~~~
+
+### In C programming, these conditional statements allow you to control the execution of code based on different conditions, making your program more flexible and responsive.
+
+* An example of a program:
 ~~~~
 #include <stdio.h> 
 
