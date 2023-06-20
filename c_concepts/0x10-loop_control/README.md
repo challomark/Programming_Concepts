@@ -1,184 +1,115 @@
 # Loop Control Statements in C
 
-### We use the loop control statements in C language for performing various loop operations until we find the condition given in a program to be true. 
+* In C programming, loop control statements allow you to control the execution of loops based on certain conditions. They provide flexibility in managing loops and altering their flow. There are three primary loop control statements in C: break, continue, and goto.
 
-* The control comes out of a loop statement when the condition given to us turns out to be false.
-* Looping is basically a phase in which we repeat the very same process multiple times unless it specifies any specific type of condition.
+## Break statement
+* The break statement is used to exit or terminate the current loop. When encountered, the break statement immediately terminates the innermost loop (where it is placed) and the program execution continues after the loop. It is commonly used to exit loops prematurely based on a specific condition.
 
-## Types of Loops in C
-
-* for loop - performs the execution of a sequence of various statements various times, then abbreviates the available code that manages the variables of the loop.
-
-* while loop - used for repeating any given statement or a group of various statements whenever the condition we have is true. Thus, it will perform the testing of the condition before the execution of the body of the loop.
-
-* do-while loop - is just like the while statement. The only exception is that the do-while statement performs the testing of the condition that is present at the very end of a loop body.
- 
-* nested loops - we can make use of a single loop or multiple loops inside any other loop, such as for, while, or even the do-while loop.
-
-#### Check bookmarks for more info
- 
-## Types of Loop Control Statements in C
-
-* goto statement - transfers the control to any labeled statement.
-
-* continue statement - will cause a loop to skip the remainder present in its body and then retest its actual condition (immediately) before reiterating it.
-
-* break statement - ultimately terminates the switch statement and the loop statement. It then transfers the statement execution after following the switch or loop immediately.
-
-## Break statement syntax 
+* Example: 
 ~~~~
-#include <stdio.h>
+for (int i = 1; i <= 10; i++) {
+    if (i == 5) {
+        break;  // Exit the loop when i becomes 5
+    }
+    printf("%d ", i);
+}
+// Output: 1 2 3 4
+~~~~
 
-int main () 
-{
-	/* definition of the local variable */
+## Continue statement
+* The continue statement is used to skip the remaining code within the loop for the current iteration and move on to the next iteration. When encountered, the continue statement jumps to the loop's next iteration without executing the remaining code in the loop body. It is useful when you want to skip certain iterations based on a specific condition.
 
-	int x = 20;
+* Example:
+~~~~
+for (int i = 1; i <= 5; i++) {
+    if (i == 3) {
+        continue;  // Skip the current iteration when i is 3
+    }
+    printf("%d ", i);
+}
+// Output: 1 2 4 5
+~~~~
 
-	/* execution of the while loop */
+## GoTo statement
+* The goto statement allows you to transfer control to a specific labeled statement within the program. It is considered a low-level control flow mechanism and is generally discouraged from regular use because it can make the code harder to understand and maintain. The labeled statement must be within the same function.
 
-	while( x < 40 ) {
+* Example:
+~~~~
+int i = 1;
 
-	printf(“The available value of x is: %d\n”, x);
+start:  // Label
+printf("%d ", i);
+i++;
 
-	x++;
+if (i <= 5) {
+    goto start;  // Jump to the 'start' label
+}
+// Output: 1 2 3 4 5
+~~~~
 
-	if( x > 30) 
-	{
-	/* termination of the loop with the use of the break statement */
+### These loop control statements offer flexibility in managing loops in C programming. The break statement terminates the loop, the continue statement skips the current iteration, and the goto statement transfers control to a specific labeled statement. However, it's important to use them judiciously and ensure the code remains clear and maintainable.
 
-	break;
-	}
+# Types of Loops in C
 
-	}
-	return 0;
+* In C programming, there are three types of loops available to control the flow of execution based on specific conditions: for, while, and do-while loops. Each loop type has its own syntax and usage.
+
+## For loop
+* The for loop is the most commonly used loop in C. It allows you to repeatedly execute a block of code for a specified number of times. The syntax of a for loop is as follows:
+~~~~
+for (initialization; condition; update) {
+    // Code to be executed
 }
 ~~~~
+* The initialization is an expression that is executed only once before the loop starts. It is typically used to initialize loop control variables.
+* The condition is a boolean expression that is evaluated before each iteration. If the condition is true, the loop continues; otherwise, it terminates.
+* The update is an expression that is evaluated after each iteration. It typically increments or decrements the loop control variable.
 
-### Output
-* The available value of x is: 20
-* The available value of x is: 21
-* The available value of x is: 22
-* The available value of x is: 23
-* The available value of x is: 24
-* The available value of x is: 25
-
-## Continue statement syntax
+* Example:
 ~~~~
-#include <stdio.h>
+for (int i = 1; i <= 5; i++) {
+    printf("%d ", i);
+}
+// Output: 1 2 3 4 5
+~~~~
 
-int main () 
-{
-	/* definition of the local variable */
-
-	int x = 10;
-
-	/* execution of the do loop */
-
-	do {
-
-	if( x == 15) {
-
-	/* skipping of the iteration */
-
-	x = x + 1;
-
-	continue;
-
-	}	
-
-	printf(“The given value of a is: %d\n”, x);
-
-	x++;
-
-	} while( x < 20 );
-
-	return 0;
-
+## While loop
+* The while loop repeatedly executes a block of code as long as a specified condition is true. The syntax of a while loop is as follows:
+~~~~
+while (condition) {
+    // Code to be executed
 }
 ~~~~
+* The condition is a boolean expression that is evaluated before each iteration. If the condition is true, the loop continues; otherwise, it terminates.
 
-### Output
-* The given value of a is: 10
-* The given value of a is: 11
-* The given value of a is: 12
-* The given value of a is: 13
-* The given value of a is: 14
-* The given value of a is: 16
-* The given value of a is: 17
-* The given value of a is: 18
-* The given value of a is: 19
-
-## Goto statement syntax
-
-* goto label;
-
-..
-
-.
-
-label: statement;
-
+* Example:
 ~~~~
-#include <stdio.h>
+int i = 1;
 
-int main ()
-{
-
-	/* definition of the local variable */
-
-	int x = 10;
-
-	/* execution of the do loop */
-	LOOP:do {
-
-	if( x == 15) /* skipping of the iteration */
-
-	x = x + 1;
-
-	goto LOOP;
-
-	}
-
-	printf(“The value of the variable x is: %d\n”, x);
-
-	x++;
-	}
-	while( a < 20 );
-
-	return 0;
-
+while (i <= 5) {
+    printf("%d ", i);
+    i++;
 }
+// Output: 1 2 3 4 5
 ~~~~
 
-### Output
-* The value of the variable x is: 10
-* The value of the variable x is: 11
-* The value of the variable x is: 12
-* The value of the variable x is: 13
-* The value of the variable x is: 14
-* The value of the variable x is: 16
-* The value of the variable x is: 17
-* The value of the variable x is: 18
-* The value of the variable x is: 19
-
-## The Condition of an Infinite Loop
-
-* Any loop in a program will ultimately become an infinite loop in case the condition never happens to be false. In such cases, we must make use of the for loops (traditionally). Just because we don’t require any of the three expressions that basically constitute the for loop, we can ultimately create an endless loop. We can do so if we leave the conditional expression to be empty.
-
-### Infinite loop syntax
+## Do-While loop
+* The do-while loop is similar to the while loop, but the condition is evaluated after each iteration. This ensures that the loop body is executed at least once, even if the condition is initially false. The syntax of a do-while loop is as follows:
 ~~~~
-#include <stdio.h>
-
-int main () 
-{
-	for( ; ; ) 
-	{
-	printf(“The available loop here will run forever in circles.\n”);
-
-	}
-
-	return 0;
-
-}
+do {
+    // Code to be executed
+} while (condition);
 ~~~~
+* The condition is a boolean expression that is evaluated after each iteration. If the condition is true, the loop continues; otherwise, it terminates.
+
+* Example:
+~~~~
+int i = 1;
+
+do {
+    printf("%d ", i);
+    i++;
+} while (i <= 5);
+// Output: 1 2 3 4 5
+~~~~
+
+### Each loop type has its own strengths and use cases. The for loop is commonly used when the number of iterations is known in advance, the while loop is used when the number of iterations is not fixed, and the do-while loop is used when you want to ensure at least one execution of the loop body.
