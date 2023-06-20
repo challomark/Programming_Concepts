@@ -1,77 +1,88 @@
-# C - Header Files
+# Functions in C
 
-* A header file is a file with extension .h which contains C function declarations and macro definitions to be shared between several source files. 
-* There are two types of header files: the files that the programmer writes and the files that comes with your compiler.
-* You request to use a header file in your program by including it with the C preprocessing directive #include, like you have seen inclusion of stdio.h header file, which comes along with your compiler.
-* Including a header file is equal to copying the content of the header file but we do not do it because it will be error-prone and it is not a good idea to copy the content of a header file in the source files, especially if we have multiple source files in a program.
+* In C programming, functions are self-contained blocks of code that perform specific tasks or operations. Functions provide a way to modularize code, improve code organization, and promote code reusability. Here's an overview of functions in C:
 
-### Include Syntax
+## Function Declaration and Definition
+* A function is declared by specifying its return type, name, and any parameters it accepts. The declaration serves as a contract for the function and informs the compiler about the function's existence. The function is defined separately, which contains the actual implementation of the function's code.
 ~~~~
-#include <file>
-~~~~
-* This form is used for system header files. It searches for a file named 'file' in a standard list of system directories. You can prepend directories to this list with the -I option while compiling your source code.
-~~~~
-#include "file"
-~~~~
-* This form is used for header files of your own program. It searches for a file named 'file' in the directory containing the current file. 
+returnType functionName(parameters);
 
-### Include Operation
-* The #include directive works by directing the C preprocessor to scan the specified file as input before continuing with the rest of the current source file. The output from the preprocessor contains the output already generated, followed by the output resulting from the included file, followed by the output that comes from the text after the #include directive.
-
-* For example, if you have a header file header.h as follows:
-~~~~
-char *test (void);
-~~~~
-* and a main program called program.c that uses the header file, like this:
-~~~~
-int x;
-#include "header.h"
-
-int main (void) {
-   puts (test ());
-}
-~~~~
-* the compiler will see the same token stream as it would if program.c read.
-~~~~
-int x;
-char *test (void);
-
-int main (void) {
-   puts (test ());
+returnType functionName(parameters) {
+    // Function body (code)
 }
 ~~~~
 
-## Once-Only Headers
-* If a header file happens to be included twice, the compiler will process its contents twice and it will result in an error. 
-* The standard way to prevent this is to enclose the entire real contents of the file in a conditional, like this:
+* Example:
 ~~~~
-#ifndef HEADER_FILE
-#define HEADER_FILE
+// Function declaration
+int addNumbers(int num1, int num2);
 
-the entire header file file
+// Function definition
+int addNumbers(int num1, int num2) {
+    int sum = num1 + num2;
+    return sum;
+}
+~~~~
 
-#endif
-~~~~
-* This construct is commonly known as a wrapper #ifndef. When the header is included again, the conditional will be false, because HEADER_FILE is defined. The preprocessor will skip over the entire contents of the file, and the compiler will not see it twice.
+## Function Parameters and Return Types
+* Functions can have zero or more parameters, which are input values passed to the function. Parameters are defined within the parentheses in the function declaration and definition. Functions can also have a return type, which specifies the type of value the function returns after execution.
 
-## Computed Includes
-* Sometimes it is necessary to select one of the several different header files to be included into your program. 
-* For instance, they might specify configuration parameters to be used on different sorts of operating systems. You could do this with a series of conditionals as follows:
+* Example:
 ~~~~
-#if SYSTEM_1
-   # include "system_1.h"
-#elif SYSTEM_2
-   # include "system_2.h"
-#elif SYSTEM_3
-   ...
-#endif
-~~~~
-* But as it grows, it becomes tedious, instead the preprocessor offers the ability to use a macro for the header name. This is called a computed include. Instead of writing a header name as the direct argument of #include, you simply put a macro name there:
-~~~~
-#define SYSTEM_H "system_1.h"
-...
-#include SYSTEM_H
-~~~~
-* SYSTEM_H will be expanded, and the preprocessor will look for system_1.h as if the #include had been written that way originally. SYSTEM_H could be defined by your Makefile with a -D option.
+int addNumbers(int num1, int num2);  // Function declaration
 
-## Watch Clickate Academy videos for more info
+int addNumbers(int num1, int num2) {  // Function definition
+    int sum = num1 + num2;
+    return sum;
+}
+~~~~
+
+## Function Call
+* To use a function, you need to call it by its name, passing appropriate arguments (if any) in the parentheses. The function call evaluates the function and returns the result (if it has a return value).
+
+* Example:
+~~~~
+int result = addNumbers(5, 3);  // Function call
+
+printf("Sum: %d\n", result);  // Output: Sum: 8
+~~~~
+
+## Function Prototypes
+* Function prototypes provide a way to declare the existence of a function before its actual definition. Prototypes are typically placed at the beginning of the code or in header files to allow the compiler to be aware of the function's signature before it is used.
+
+* Example:
+~~~~
+// Function prototype
+int addNumbers(int num1, int num2);
+
+int main() {
+    int result = addNumbers(5, 3);  // Function call
+    printf("Sum: %d\n", result);
+    return 0;
+}
+
+// Function definition
+int addNumbers(int num1, int num2) {
+    int sum = num1 + num2;
+    return sum;
+}
+~~~~
+
+## Function Parameters: Pass by Value
+* In C, function parameters are passed by value, which means the function receives a copy of the argument's value. Modifying the parameter within the function does not affect the original argument.
+
+* Example:
+~~~~
+void modifyValue(int num) {
+    num = num + 1;  // Modifying the local copy of 'num'
+}
+
+int main() {
+    int number = 5;
+    modifyValue(number);  // Function call
+    printf("Number: %d\n", number);  // Output: Number: 5
+    return 0;
+}
+~~~~
+
+### Functions are essential building blocks in C programming, enabling code organization, reusability, and modularity. They allow you to encapsulate logic into separate units, making programs easier to understand and maintain.
