@@ -34,7 +34,7 @@ if (!(a > 10)) {
 }
 ~~~~
 
-### What to remember
+### What to remember...
 
 #### And Operators
 
