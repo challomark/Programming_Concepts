@@ -13,3 +13,25 @@
 * C has influenced the development of many other programming languages, including C++, C#, Objective-C, and Java, among others. Learning C provides a solid foundation for understanding these languages and delving into systems-level programming.
 
 * Overall, C is a powerful and versatile programming language that continues to be widely used and taught due to its efficiency, performance, and extensive use in various domains.
+
+## Comments
+
+* In C programming, comments are used to add explanatory or descriptive text within the source code. Comments are ignored by the compiler and do not affect the execution of the program. They serve as notes for programmers or as a way to disable certain lines of code temporarily.
+
+* There are two ways to write comments in C:
+	* Single-line comments: To create a comment that spans a single line, you can use two forward slashes (//) followed by the comment text. Anything after the // symbol on the same line will be considered a comment. Here's an example:
+~~~~
+// This is a single-line comment in C
+int x = 10; // This is another comment
+~~~~
+
+	* Multi-line comments: To create comments that span multiple lines, you can enclose the comment text between /* and */ symbols. Everything between these symbols, regardless of line breaks, will be treated as a comment. Here's an example:
+~~~~
+/* This is a multi-line comment
+   in C programming.
+   It can span multiple lines. */
+int y = 20;
+/* This is another comment */
+~~~~
+
+* It's good practice to include comments in your code to make it more readable and understandable, especially for complex or critical sections of code. Comments can help other programmers (or even yourself) understand the purpose, logic, or any specific details about the code, making it easier to maintain and debug in the future.
