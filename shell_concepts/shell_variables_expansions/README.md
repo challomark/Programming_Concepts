@@ -42,7 +42,8 @@ files=$(ls)
 ~~~~
 
 ### Arithmetic expansion: 
-* $((expression)) allows you to perform arithmetic operations within a script. Example:~~~~
+* $((expression)) allows you to perform arithmetic operations within a script. Example:
+~~~~
 result=$((5 + 3))
 ~~~~
 
