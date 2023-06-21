@@ -12,19 +12,22 @@
 
 ## Variables
 * Variables are used to store and manipulate data in shell scripts. They can be assigned values and referenced within the script.
-	
-	* Variable assignment: Variables are assigned using the syntax variable_name=value. No spaces are allowed around the = sign. Example:
+
+### Variable assignment: 
+* Variables are assigned using the syntax variable_name=value. No spaces are allowed around the = sign. Example:
 ~~~~
 name="John"
 age=25
 ~~~~
 
-	* Variable expansion: To reference the value of a variable, you prefix its name with a $ sign. Example:
+### Variable expansion: 
+* To reference the value of a variable, you prefix its name with a $ sign. Example:
 ~~~~
 echo "My name is $name and I'm $age years old."
 ~~~~
 
-	* Environment variables: Environment variables are global variables that are inherited by child processes. They are often used to configure the system and provide information to programs. Example:
+### Environment variables: 
+* Environment variables are global variables that are inherited by child processes. They are often used to configure the system and provide information to programs. Example:
 ~~~~
 echo "The value of the HOME variable is $HOME."
 ~~~~
@@ -32,26 +35,31 @@ echo "The value of the HOME variable is $HOME."
 ## Expansions
 * Expansions are special constructs used to manipulate variables or command output within shell scripts.
 
-	* Command substitution: $(command) or `command` allows you to capture the output of a command and use it as a value. Example:
+### Command substitution: 
+* $(command) or `command` allows you to capture the output of a command and use it as a value. Example:
 ~~~~
 files=$(ls)
 ~~~~
 
-	* Arithmetic expansion: $((expression)) allows you to perform arithmetic operations within a script. Example:~~~~
+### Arithmetic expansion: 
+* $((expression)) allows you to perform arithmetic operations within a script. Example:~~~~
 result=$((5 + 3))
 ~~~~
 
-	* Brace expansion: {pattern} expands into multiple comma-separated values based on a pattern. Example:
+### Brace expansion: 
+* {pattern} expands into multiple comma-separated values based on a pattern. Example:
 ~~~~
 echo {a,b,c}
 ~~~~
 
-	* Pathname expansion (globbing): Wildcards such as * and ? can be used to match filenames or paths. Example:
+### Pathname expansion (globbing): 
+* Wildcards such as * and ? can be used to match filenames or paths. Example:
 ~~~~
 ls *.txt
 ~~~~
 
-	* Variable expansion modifiers: Additional modifiers can be applied to variable expansions, such as substring extraction, length calculation, and more. Example:
+### Variable expansion modifiers: 
+* Additional modifiers can be applied to variable expansions, such as substring extraction, length calculation, and more. Example:
 ~~~~
 echo ${variable:2:5}  # Extracts a substring of variable starting from index 2 with length 5
 echo ${#variable}     # Returns the length of variable
