@@ -32,9 +32,9 @@ if [ $age -ge 18 ]; then
 else
   echo "You are a minor."
 fi
-~~~
+~~~~
 
-* Example (for loop)
+* Example (for loop):
 ~~~~
 for i in {1..5}; do
   echo "Iteration $i"
