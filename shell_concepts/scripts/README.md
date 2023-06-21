@@ -14,11 +14,11 @@
 
 * Example:
 ~~~~
-# Variable declaration and assignment
+//Variable declaration and assignment
 name="John"
 age=25
 
-# Variable usage
+//Variable usage
 echo "My name is $name and I'm $age years old."
 ~~~~
 
@@ -46,11 +46,11 @@ done
 
 * Example:
 ~~~~
-# Command execution and capturing output
+//Command execution and capturing output
 files=$(ls)
 echo "Files: $files"
 
-# Command execution and capturing exit status
+//Command execution and capturing exit status
 grep "pattern" file.txt
 if [ $? -eq 0 ]; then
   echo "Pattern found."
@@ -64,14 +64,14 @@ fi
 
 * Example:
 ~~~~
-# Reading user input
+//Reading user input
 read -p "Enter your name: " username
 echo "Hello, $username!"
 
-# Redirecting output to a file
+//Redirecting output to a file
 echo "Some content" > output.txt
 
-# Appending output to a file
+//Appending output to a file
 echo "More content" >> output.txt
 ~~~~
 
@@ -80,12 +80,12 @@ echo "More content" >> output.txt
 
 * Example:
 ~~~~
-# Function definition
+//Function definition
 greet() {
   echo "Hello, $1!"
 }
 
-# Function invocation
+//Function invocation
 greet "Alice"
 greet "Bob"
 ~~~~
