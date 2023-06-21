@@ -12,6 +12,7 @@
 
 ## Variables
 * Variables are used to store and manipulate data in shell scripts. They can be assigned values and referenced within the script.
+	
 	* Variable assignment: Variables are assigned using the syntax variable_name=value. No spaces are allowed around the = sign. Example:
 ~~~~
 name="John"
@@ -30,6 +31,7 @@ echo "The value of the HOME variable is $HOME."
 
 ## Expansions
 * Expansions are special constructs used to manipulate variables or command output within shell scripts.
+
 	* Command substitution: $(command) or `command` allows you to capture the output of a command and use it as a value. Example:
 ~~~~
 files=$(ls)
