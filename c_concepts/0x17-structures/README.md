@@ -81,3 +81,48 @@ int main() {
 * The example demonstrates how to assign values to the array elements and print them using a loop.
 
 * Keep in mind that when working with arrays of structures, you need to ensure that you stay within the bounds of the array to avoid accessing elements beyond its size.
+
+## Structure Pointer (Pointer to a Structure)
+
+* In C programming, you can use structure pointers to work with structures dynamically and allocate memory for them at runtime. Structure pointers allow you to manipulate and access the members of a structure through a pointer variable. 
+
+* Here's an example that illustrates the usage of structure pointers:
+~~~~
+#include <stdio.h>
+#include <stdlib.h>
+
+struct Person {
+    char name[50];
+    int age;
+};
+
+int main() {
+    struct Person *personPtr; // Declare a structure pointer
+    
+    // Allocate memory for a structure
+    personPtr = (struct Person *)malloc(sizeof(struct Person));
+    
+    // Access and modify structure members using the pointer
+    strcpy(personPtr->name, "John");
+    personPtr->age = 25;
+    
+    // Access and print structure members using the pointer
+    printf("Name: %s\n", personPtr->name);
+    printf("Age: %d\n", personPtr->age);
+    
+    // Free the dynamically allocated memory
+    free(personPtr);
+    
+    return 0;
+}
+~~~~
+
+* In this example, we declare a structure pointer personPtr of type struct Person. We then allocate memory for a struct Person using the malloc function and assign the memory address to personPtr.
+
+* To access and modify the members of the structure using the pointer, we use the arrow operator (->). For example, personPtr->name refers to the name member of the structure pointed to by personPtr.
+
+* Similarly, to print the structure members using the pointer, we use the arrow operator in the printf statements.
+
+* Finally, it's important to free the dynamically allocated memory using the free function to avoid memory leaks.
+
+* Structure pointers are particularly useful when working with dynamic memory allocation, passing structures to functions by reference, or when dealing with arrays of structures dynamically.
