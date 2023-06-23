@@ -13,5 +13,5 @@ void main()
 	struct student *ptr = &s1;
 
 	printf("Information for s1");
-	printf("\n%d %s %f", &s1.rollno, s1.name, s1.marks);
+	printf("\n%d %s %f\n", ptr->rollno, ptr->name, ptr->marks);
 }
