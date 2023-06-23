@@ -126,3 +126,45 @@ int main() {
 * Finally, it's important to free the dynamically allocated memory using the free function to avoid memory leaks.
 
 * Structure pointers are particularly useful when working with dynamic memory allocation, passing structures to functions by reference, or when dealing with arrays of structures dynamically.
+
+## Union
+
+* In C programming, a union is a user-defined data type that allows you to store different types of data in the same memory location. Unlike a structure, which allocates memory for each member independently, a union allocates a single block of memory that can be interpreted as different types based on which member is being accessed.
+
+* Here's an example that demonstrates the usage of unions:
+~~~~
+#include <stdio.h>
+
+union Data {
+    int intValue;
+    float floatValue;
+    char stringValue[20];
+};
+
+int main() {
+    union Data data;
+
+    data.intValue = 42;
+    printf("Integer value: %d\n", data.intValue);
+
+    data.floatValue = 3.14;
+    printf("Float value: %.2f\n", data.floatValue);
+
+    strcpy(data.stringValue, "Hello");
+    printf("String value: %s\n", data.stringValue);
+
+    printf("After assigning string value: Integer value: %d\n", data.intValue);
+
+    return 0;
+}
+~~~~
+
+* In this example, we define a union called Data with three members: intValue of type int, floatValue of type float, and stringValue of type char array.
+
+* We create a variable data of type union Data. We can assign values to the different members of the union and access them interchangeably.
+
+* In the example, we first assign an integer value to data.intValue and then print it. Next, we assign a float value to data.floatValue and print it. Finally, we assign a string value using strcpy to data.stringValue and print it. Notice that when we assign the string value, it affects the memory location of the union, which means accessing data.intValue afterward will give unpredictable results.
+
+* The memory allocated for a union is determined by the size of its largest member. In the example above, the memory allocated for union Data is the size of stringValue (20 bytes), as it is the largest member.
+
+* Unions are often used when you need to represent different types of data in the same memory location, and you only need to access one member at a time. They can be particularly useful in scenarios such as saving memory in certain data structures or dealing with binary data where different interpretations of the same memory block are required. However, be cautious when accessing the members of a union to avoid unintended consequences.
