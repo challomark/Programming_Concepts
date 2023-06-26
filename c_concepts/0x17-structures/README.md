@@ -168,3 +168,37 @@ int main() {
 * The memory allocated for a union is determined by the size of its largest member. In the example above, the memory allocated for union Data is the size of stringValue (20 bytes), as it is the largest member.
 
 * Unions are often used when you need to represent different types of data in the same memory location, and you only need to access one member at a time. They can be particularly useful in scenarios such as saving memory in certain data structures or dealing with binary data where different interpretations of the same memory block are required. However, be cautious when accessing the members of a union to avoid unintended consequences.
+
+## Typedef
+
+* In C programming, you can use the typedef keyword in combination with structures to create a new name (alias) for a structure type. This allows you to define a structure and its associated type in a single statement, making the code more concise and readable.
+
+* Here's an example of using typedef with structures:
+~~~~
+#include <stdio.h>
+
+typedef struct {
+    char name[50];
+    int age;
+} Person;
+
+int main() {
+    Person person1;
+
+    strcpy(person1.name, "John");
+    person1.age = 25;
+
+    printf("Name: %s\n", person1.name);
+    printf("Age: %d\n", person1.age);
+
+    return 0;
+}
+~~~~
+
+* In this example, we define a new type called Person using typedef and a structure definition. The structure contains two members: name of type char array and age of type int.
+
+* By using typedef, we can create an alias for the structure definition (struct { ... }) and directly use the alias as a type (Person). This eliminates the need to explicitly write struct each time we declare variables of this structure type.
+
+* In the main() function, we declare a variable person1 of type Person and assign values to its members using the dot (.) operator. We can then access and print the members as usual.
+
+* Using typedef with structures helps improve code readability, especially when working with complex or nested structures. It provides a way to create meaningful and self-explanatory type names that are easier to use and understand.
