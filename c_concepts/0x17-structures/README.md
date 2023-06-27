@@ -202,3 +202,36 @@ int main() {
 * In the main() function, we declare a variable person1 of type Person and assign values to its members using the dot (.) operator. We can then access and print the members as usual.
 
 * Using typedef with structures helps improve code readability, especially when working with complex or nested structures. It provides a way to create meaningful and self-explanatory type names that are easier to use and understand.
+
+## Structure Padding
+
+* Structure padding, also known as structure alignment, is a concept in C programming where additional bytes are inserted by the compiler between structure members to ensure proper memory alignment. This padding is added to optimize memory access and improve performance.
+
+* The padding is necessary because many computer architectures have alignment requirements for certain data types. For example, some processors may require that a 4-byte integer be stored at a memory address that is a multiple of 4. If a structure contains members with different sizes and alignments, padding is added to align the members properly in memory.
+
+* The specific padding added by the compiler depends on the data types and their arrangement within the structure. It typically aligns members on addresses that are multiples of their size or a compiler-defined alignment value. This ensures that accessing structure members is efficient and avoids potential performance penalties caused by misaligned memory access.
+
+* Consider the following example:
+~~~~
+#include <stdio.h>
+
+struct Example {
+    char c;
+    int i;
+    double d;
+};
+
+int main() {
+    printf("Size of struct Example: %lu bytes\n", sizeof(struct Example));
+
+    return 0;
+}
+~~~~
+
+* In this example, we define a structure Example containing a char member (c), an int member (i), and a double member (d).
+
+* When you run this code, you may find that the size of the structure is larger than the sum of the sizes of its members. This is because the compiler adds padding bytes to align the members properly.
+
+* The exact amount of padding inserted can vary depending on the compiler and platform. You can use the sizeof operator to determine the size of the structure, including any padding.
+
+* While structure padding is automatic and handled by the compiler, it's essential to be aware of its implications, especially when dealing with data structures that involve I/O, networking, or binary file operations. In such cases, you may need to ensure proper data alignment by using compiler-specific directives or structure packing techniques to minimize padding or force specific alignments.
