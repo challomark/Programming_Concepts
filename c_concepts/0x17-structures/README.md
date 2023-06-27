@@ -235,3 +235,41 @@ int main() {
 * The exact amount of padding inserted can vary depending on the compiler and platform. You can use the sizeof operator to determine the size of the structure, including any padding.
 
 * While structure padding is automatic and handled by the compiler, it's essential to be aware of its implications, especially when dealing with data structures that involve I/O, networking, or binary file operations. In such cases, you may need to ensure proper data alignment by using compiler-specific directives or structure packing techniques to minimize padding or force specific alignments.
+
+## Structure Packing
+
+* Structure packing in C refers to the technique of minimizing or eliminating structure padding to reduce the memory overhead caused by the alignment requirements of the compiler. By packing a structure, you can ensure that its members are tightly packed together without any padding bytes inserted by the compiler.
+
+* To achieve structure packing, you can use compiler-specific directives or pragmas to control the alignment and packing behavior. The specific method varies depending on the compiler you are using. Here are a few commonly used techniques:
+
+### Using compiler-specific directives
+
+* Some compilers provide directives to control structure packing. For example, in GCC and Clang, you can use the __attribute__((packed)) attribute to instruct the compiler to pack the structure tightly without adding any padding.
+~~~~
+struct Example {
+    char c;
+    int i;
+    double d;
+} __attribute__((packed));
+~~~~
+
+* Note that using packed structures may result in slower memory access and potential alignment issues on some platforms.
+
+### Using compiler pragmas
+
+* Certain compilers support pragmas that allow you to specify structure packing options. For example, in Visual C++, you can use the #pragma pack directive to control structure packing.
+~~~~
+#pragma pack(push, 1)
+struct Example {
+    char c;
+    int i;
+    double d;
+};
+#pragma pack(pop)
+~~~~
+
+* In this example, the #pragma pack(push, 1) directive sets the packing alignment to 1 byte, and the #pragma pack(pop) directive restores the default packing behavior.
+
+* Note that the packing directives and pragmas can vary across compilers, so it's important to consult the documentation for your specific compiler.
+
+* It's worth noting that structure packing should be used judiciously, as it can have implications for performance and portability. Tightly packed structures may lead to unaligned memory access, resulting in slower performance or even causing crashes on certain platforms. Therefore, it's crucial to understand the alignment requirements of the target platform and consider the trade-offs between memory usage and performance when using structure packing techniques.
