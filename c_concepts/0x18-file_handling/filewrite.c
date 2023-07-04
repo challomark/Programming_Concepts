@@ -1,10 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 void main()
 {
 	FILE *fp = NULL;
-	char ch = 'a';
+	char str[50];
+	int i;
 
 	fopen("abc.txt", "w");
 
@@ -14,7 +16,13 @@ void main()
 		exit(1);
 	}
 
-	fputc(ch, fp);
+	printf("Enter the string:");
+	gets(str);
+
+	fputs(str, fp);
+
+	//for(i = 0; i != strlen(str); i++)
+	//	fputc(str[i], fp);
 
 	fclose(fp);
 }
