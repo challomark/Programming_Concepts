@@ -6,9 +6,11 @@ void main()
 {
 	FILE *fp = NULL;
 	char str[50];
+	int a = 10;
+	char ch = 's';
 	int i;
 
-	fopen("abc.txt", "w");
+	fp = fopen("abc.txt", "w");
 
 	if (fp == NULL)
 	{
@@ -19,7 +21,9 @@ void main()
 	printf("Enter the string:");
 	gets(str);
 
-	fputs(str, fp);
+	fprintf(fp, "%d %s %c", a, str, ch);
+
+	//fputs(str, fp);
 
 	//for(i = 0; i != strlen(str); i++)
 	//	fputc(str[i], fp);
