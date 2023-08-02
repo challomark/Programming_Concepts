@@ -14,9 +14,16 @@ void main()
 		exit(1);
 	}
 
-	fseek(fp, 6, SEEK_SET);
+	fseek(fp, 5, SEEK_SET);
 	ch = fgetc(fp);
+	printf("%c", ch);
 
+	fseek(fp, -3, SEEK_CUR);
+	fgetc(fp);
+	printf("%c", ch);
+
+	fseek(fp, -3, SEEK_END);
+	fgetc(fp);
 	printf("%c", ch);
 
 	fclose(fp);
