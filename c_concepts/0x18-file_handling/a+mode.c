@@ -9,7 +9,7 @@ void main()
 	fp = fopen("abc.txt", "a+");
 	if(fp == NULL)
 	{
-		printf("File doesn't exist");
+		printf("File doesn't exist\n");
 		exit(1);
 	}
 
@@ -19,7 +19,7 @@ void main()
 		printf("%c", ch);
 	}
 
-	fputs("This is great!", fp);
+	fputs("This is great!\n", fp);
 
 	fclose(fp);
 }
