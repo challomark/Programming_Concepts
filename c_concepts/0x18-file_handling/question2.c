@@ -4,7 +4,7 @@
 void main()
 {
 	FILE *fptr1 = NULL, *fptr2 = NULL;
-	char c;
+	char ch;
 	int n = 1;
 
 	fptr1 = fopen("abc.txt", "r");
@@ -21,9 +21,9 @@ void main()
 		exit(1);
 	}
 
-	while((c = fgetc(fptr1))!= EOF)
+	while((ch = fgetc(fptr1))!= EOF)
 	{
-		fputc(c, fptr2);
+		fputc(ch, fptr2);
 	}
 
 	fclose(fptr1);
