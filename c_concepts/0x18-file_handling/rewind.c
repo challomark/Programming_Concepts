@@ -15,6 +15,16 @@ void main()
 		exit(1);
 	}
 	
+	fseek(fp, 3, SEEK_SET);
+
+	while(!feof(fp))
+	{
+		ch = fgetc(fp);
+		printf("%c", ch);
+	}
+
+	rewind(fp);
+
 	while(!feof(fp))
 	{
 		ch = fgetc(fp);
