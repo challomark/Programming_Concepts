@@ -52,9 +52,10 @@ dynamicArray = NULL; // Good practice to set the pointer to NULL after freeing
 ~~~~
 
 ### It's important to note a few things:
-	* Always check if the memory allocation was successful (i.e., the pointer returned is not NULL) before using the allocated memory.
-	* After you're done using dynamically allocated memory, always free it to avoid memory leaks.
-	* Using freed memory can lead to undefined behavior, so be careful not to dereference or modify memory after freeing it.
+
+* Always check if the memory allocation was successful (i.e., the pointer returned is not NULL) before using the allocated memory.
+* After you're done using dynamically allocated memory, always free it to avoid memory leaks.
+* Using freed memory can lead to undefined behavior, so be careful not to dereference or modify memory after freeing it.
 
 ### Here's a simple example of dynamic memory allocation in C:
 ~~~~
