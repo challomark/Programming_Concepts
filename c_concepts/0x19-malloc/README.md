@@ -19,6 +19,12 @@ void* malloc(size_t size);
 int* dynamicArray = (int*)malloc(5 * sizeof(int));
 ~~~~
 
+* A few key points to remember when using malloc:
+	* Always check if the memory allocation was successful by verifying if the returned pointer is not NULL.
+	* Memory allocated using malloc is not initialized by default. It may contain random or garbage values, so make sure to initialize it before use if necessary.
+	* After you're done using the allocated memory, free it using the free function to prevent memory leaks. Set the pointer to NULL after freeing to avoid accidental use of freed memory.
+	* Avoid casting the result of malloc in C++, as it's not necessary and can mask potential type-related issues. However, in C, casting is still considered good practice.
+ 
 ## Calloc
 
 * Stands for "contiguous allocation." It allocates memory for an array of elements, initializing all bytes to zero. The syntax is:
