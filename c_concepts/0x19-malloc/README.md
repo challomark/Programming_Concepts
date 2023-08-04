@@ -9,6 +9,11 @@
 void* malloc(size_t size);
 ~~~~
 
+* size: The number of bytes of memory to allocate. This parameter specifies the size of the memory block you want to allocate.
+
+* The malloc function returns a pointer of type void* (a generic pointer) to the allocated memory block if the allocation is successful. If the allocation fails (usually due to insufficient memory), the function returns a NULL pointer.
+* It's important to cast the returned pointer to the appropriate data type before using it. 
+
 * Example:
 ~~~~
 int* dynamicArray = (int*)malloc(5 * sizeof(int));
