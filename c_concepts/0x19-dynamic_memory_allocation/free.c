@@ -6,6 +6,10 @@ int main()
 	int n, i, *ptr;
 
 	ptr = (int*)malloc(3 * sizeof(int));
+	if(ptr == NULL)
+	{
+		printf("Memory not allocated");
+	}
 
 	printf("\nEnter the values: ");
 
