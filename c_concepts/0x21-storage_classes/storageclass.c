@@ -14,7 +14,7 @@ int main()
 		printf("Inside block1 %d\n", a);
 	}
 	{
-		printf("Inside block2%d\n", a++);
+		printf("Inside block2 %d\n", a++);
 	}
 
 	printf("Inside main %d\n", a);
