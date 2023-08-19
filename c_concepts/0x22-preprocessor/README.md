@@ -4,7 +4,7 @@
 
 * Here are some commonly used preprocessor directives and their functions:
 
-# #include
+## #include
 
 * This directive is used to include the contents of another file in the current file. It's commonly used to include header files that contain function prototypes and definitions. 
 * For example:
@@ -12,7 +12,7 @@
 #include <stdio.h>
 ~~~~
 
-# #define
+## #define
 
 * This directive is used to define constants or macros. Macros are typically short pieces of code that are replaced with their respective definitions during preprocessing. 
 * For example:
@@ -20,7 +20,7 @@
 #define PI 3.14159
 ~~~~
 
-# #ifdef, #ifndef, #else, #endif
+## #ifdef, #ifndef, #else, #endif
 
 * These directives are used for conditional compilation. They allow you to include or exclude portions of code based on certain conditions. 
 * For example:
@@ -30,11 +30,11 @@
 #endif
 ~~~~
 
-# #pragma
+## #pragma
 
 * This directive provides instructions to the compiler about how to process the code. Pragmas are compiler-specific and can be used to enable or disable optimizations, control alignment, etc.
 
-# #error
+## #error
 
 * This directive is used to generate a compilation error with a specified message. 
 * For example:
@@ -44,15 +44,15 @@
 #endif
 ~~~~
 
-# #warning
+## #warning
 
 * This directive generates a warning during compilation with a specified message. It's often used to alert developers about potential issues.
 
-# #undef
+## #undef
 
 * This directive is used to undefine a previously defined macro.
 
-# #line
+## #line
 
 * This directive allows you to change the line number and file name that are associated with errors and warnings generated during compilation.
 
