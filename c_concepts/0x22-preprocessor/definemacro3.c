@@ -7,5 +7,10 @@
 int main()
 {
 	MAX(3, 4);
+	
+#undef MAX /*using undefine*/
+
+	MAX(5, 4);
+
 	return 0;
 }
