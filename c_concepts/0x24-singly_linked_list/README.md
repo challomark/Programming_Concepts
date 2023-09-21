@@ -6,18 +6,16 @@
 
 * Here are some key concepts and operations related to singly linked lists:
 
-## Node Structure:
+## Defining a Node Structure:
 * In C, you can represent a node of a singly linked list using a struct. Here's an example:
 ~~~~
 struct Node {
-    int data;
-    struct Node* next;
+    int data;           // Data stored in the node
+    struct Node* next;  // Pointer to the next node
 };
 ~~~~
 
-* This structure contains an integer data field and a pointer to the next node in the list.
-
-## Creating a Linked List:
+## Create Functions for List Operations:
 * To create a singly linked list, you typically start with a head pointer, which points to the first node in the list. Initially, the list is empty, so the head pointer should be set to NULL.
 ~~~~
 struct Node* head = NULL;
@@ -42,6 +40,82 @@ struct Node* head = NULL;
 ## Memory Management:
 * Don't forget to free the memory allocated for nodes you delete to prevent memory leaks.
 
+## Example using singly linked list:
+~~~~
+// Function to create a new node with the given data
+struct Node* createNode(int data) {
+    struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));
+    newNode->data = data;
+    newNode->next = NULL;
+    return newNode;
+}
+
+// Function to insert a new node at the beginning of the list
+void insertAtBeginning(struct Node** head, int data) {
+    struct Node* newNode = createNode(data);
+    newNode->next = *head;
+    *head = newNode;
+}
+
+// Function to delete a node with a given data value
+void deleteNode(struct Node** head, int data) {
+    struct Node* current = *head;
+    struct Node* previous = NULL;
+
+    while (current != NULL && current->data != data) {
+        previous = current;
+        current = current->next;
+    }
+
+    if (current == NULL) {
+        // Node with data not found
+        return;
+    }
+
+    if (previous == NULL) {
+        // Node to be deleted is the first node
+        *head = current->next;
+    } else {
+        // Node to be deleted is not the first node
+        previous->next = current->next;
+    }
+
+    free(current);
+}
+
+// Function to traverse and print the linked list
+void traverse(struct Node* head) {
+    struct Node* current = head;
+
+    while (current != NULL) {
+        printf("%d -> ", current->data);
+        current = current->next;
+    }
+    printf("NULL\n");
+}
+~~~~
+
+## Use the Linked List
+* Now, you can create a linked list, insert elements, delete elements, and traverse the list using the defined functions:
+~~~~
+int main() {
+    struct Node* myList = NULL;
+
+    insertAtBeginning(&myList, 10);
+    insertAtBeginning(&myList, 20);
+    insertAtBeginning(&myList, 30);
+
+    printf("Linked List: ");
+    traverse(myList);
+
+    deleteNode(&myList, 20);
+
+    printf("Linked List after deleting 20: ");
+    traverse(myList);
+
+    return 0;
+}
+~~~~
 ## Advantages:
 * Singly linked lists are efficient for inserting and deleting elements at the beginning of the list. They also use memory efficiently because nodes can be dynamically allocated.
 
