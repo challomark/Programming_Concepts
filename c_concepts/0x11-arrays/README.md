@@ -53,4 +53,18 @@ for (int i = 0; i < 5; i++) {
 }
 ~~~~
 
+## Multidimensional Arrays
+* C supports multidimensional arrays, such as 2D arrays, which are essentially arrays of arrays.
+~~~~
+int matrix[3][3] = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
+~~~~
+
+## Array Size and sizeof:
+* You can determine the size (in bytes) of an array using the sizeof operator:
+~~~~
+int size = sizeof(numbers); // Returns the total size of the 'numbers' array in bytes.
+~~~~
+* Remember that arrays have a fixed size, which is determined at compile time. If you need a dynamic data structure that can grow or shrink, consider using pointers and dynamic memory allocation with functions like malloc and realloc.
+
+
 ### Arrays in C provide a convenient way to work with collections of data. They are widely used in various programming tasks, such as storing data, performing calculations, and implementing data structures and algorithms.
